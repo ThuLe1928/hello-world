@@ -3,7 +3,11 @@
     <head>
         <script>
             
-            
+            //This function does no fit with rules "Single responsibility" because it does 2 things: 1-Get value of element from html, 2-Swap the values but the function name meaning just one the thing 2.
+            //Thus, need to seperate in to 2 function, one for geting and seting value to html elements, one for swaping 2 variables.
+            //So please change to a function with 2 input that need to swap swapVariables(vairable1, variable2).
+            //And Create new function named handlingButtonSwapClicked to the swapVariables func above.
+           
             function swapVariable() {
                 var a = parseInt(document.getElementById("a").value);
                 var b = parseInt(document.getElementById("b").value);
