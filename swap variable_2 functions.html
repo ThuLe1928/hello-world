@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            /**function swapVariable() {
+                var a = parseInt(document.getElementById("a").value);
+                var b = parseInt(document.getElementById("b").value);
+                // a += b;
+                // b = a - b;
+                // a = a - b;
+
+                document.getElementById("a").value = b;
+                document.getElementById("b").value = a;
+
+            }
+            **/
+            var a,b;
+            function handlingButtonSwapClicked() {
+                a = parseInt(document.getElementById("a").value);
+                b = parseInt(document.getElementById("b").value);
+                this.swapVariable (a,b);
+                document.getElementById("a").value = a;
+                document.getElementById("b").value = b;
+            }
+
+            function swapVariable (a,b) {
+                a += b;
+                b = a - b;
+                a = a - b;
+            }
+        </script>
+    </head> 
+
+    <body>
+        <label for="a">số a: 
+            <input type="number" id="a" name="a">
+        </label>
+        <br> 
+        <br>
+        <label for="b">số b: 
+            <input type="number" id="b" name="b">
+        </label>
+        <br>
+        <br>
+        <button type="submit" onclick="handlingButtonSwapClicked()">Swap two numbers</button>
+
+    </body>
+</html>
