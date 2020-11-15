@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function handlingButtonSwapClicked() {
+                var number1 = null;
+                var number2 = null;
+                var myArray = [number1, number2];
+                myArray[0] = parseInt (document.getElementById("a").value);
+                myArray[1] = parseInt (document.getElementById("b").value);
+                console.log(myArray);
+                swapTwoVariables(myArray);
+                document.getElementById("a").value = myArray[0];
+                document.getElementById("b").value = myArray[1];
+            }
+            function swapTwoVariables (sampleArray) {
+                sampleArray[0] += sampleArray[1];
+                sampleArray[1] = sampleArray[0] - sampleArray[1];
+                sampleArray[0] = sampleArray[0] - sampleArray[1];
+            }
+        </script>
+    </head>
+    <body>
+        <label for="a">số a: 
+            <input type="number" id="a" name="a">
+        </label>
+        <br> 
+        <br>
+        <label for="b">số b: 
+            <input type="number" id="b" name="b">
+        </label>
+        <br>
+        <br>
+        <button type="submit" onclick="handlingButtonSwapClicked()">Swap two numbers</button>
+
+    </body>
+</html>
