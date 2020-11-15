@@ -1,24 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-            function handlingButtonSwapClicked() {
-                var number1 = null;
-                var number2 = null;
-                var myArray = [number1, number2];
-                myArray[0] = parseInt (document.getElementById("a").value);
-                myArray[1] = parseInt (document.getElementById("b").value);
-                console.log(myArray);
-                swapTwoVariables(myArray);
-                document.getElementById("a").value = myArray[0];
-                document.getElementById("b").value = myArray[1];
-            }
-            function swapTwoVariables (sampleArray) {
-                sampleArray[0] += sampleArray[1];
-                sampleArray[1] = sampleArray[0] - sampleArray[1];
-                sampleArray[0] = sampleArray[0] - sampleArray[1];
-            }
-        </script>
+        <script src="swapVariableFunction.js"></script>
+        
     </head>
     <body>
         <label for="a">số a: 
